@@ -29,5 +29,5 @@ public class CarEntity {
 
     @Column(name= "weight_unity")
     @Enumerated(EnumType.STRING)
-    private WeightRange WeightUnity;
+    private WeightRange weightUnity;
 }
