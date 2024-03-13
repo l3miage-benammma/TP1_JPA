@@ -9,14 +9,11 @@ import java.time.OffsetDateTime;
 @Table(name="User")
 public class User {
     @Id
-    @Column
     private Long idUser;
 
-    @Column
     private boolean SSO;
 
-    @Column
     private OffsetDateTime lastConnexion;
-    @OneToOne(mappedBy = "Session")
+    @OneToOne
     private Session session;
 }

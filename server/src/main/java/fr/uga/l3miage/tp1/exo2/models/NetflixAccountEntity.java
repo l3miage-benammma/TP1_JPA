@@ -1,8 +1,8 @@
 package fr.uga.l3miage.tp1.exo2.models;
 import javax.persistence.*;
 import fr.uga.l3miage.tp1.exo2.enums.typeAccount;
-
-public class netflix_account {
+@Table(name = "netflix_account")
+public class NetflixAccountEntity {
     @Id
     private Long id;
 
@@ -16,7 +16,6 @@ public class netflix_account {
     @Column(name = "uuid_user")
     private String uuidUser;
 
-    @OneToOne
-    @JoinColumn(name = "uuid_user", referencedColumnName = "uuid") // uuid_user est une clé étrangère
-    private netflix_user netflixUser;
+    @OneToOne(mappedBy = "netflix_account")
+    private NetflixUserEntity netflixUser;
 }

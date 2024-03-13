@@ -6,18 +6,14 @@ import java.util.UUID;
 @Table(name="session")
 public class Session {
     @Id
-    @Column
     private UUID idSession;
 
-    @Column
     private String lastCommand;
 
-    @Column
     private String currentDir;
 
-    @Column
     private boolean lock;
 
-    @OneToOne
+    @OneToOne(mappedBy = "session")
     private User user;
 }

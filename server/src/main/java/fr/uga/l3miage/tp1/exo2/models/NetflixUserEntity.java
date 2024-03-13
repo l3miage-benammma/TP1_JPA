@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "netflix_user")
-public class netflix_user {
+public class NetflixUserEntity {
 
     @Id
     @Column
@@ -28,9 +28,6 @@ public class netflix_user {
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
-    @OneToOne(mappedBy = "netflix_user")
-    private netflix_account netflixAccount;
-
-
-    // Getters and setters...
+    @OneToOne
+    private NetflixAccountEntity netflixAccount;
 }
