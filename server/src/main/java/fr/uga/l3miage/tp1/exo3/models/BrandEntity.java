@@ -1,7 +1,9 @@
 package fr.uga.l3miage.tp1.exo3.models;
 import javax.persistence.*;
 import fr.uga.l3miage.tp1.exo3.enums.BrandType;
-import java.util.List;
+
+import java.util.Set;
+
 @Entity
 @Table(name="brand_miage")
 public class BrandEntity {
@@ -16,6 +18,6 @@ public class BrandEntity {
     @Column(name = "type")
     private BrandType type;
 
-    @OneToMany(mappedBy = "brand")
-    private List<ProductEntity> products;
+    @ManyToOne
+    private Set<ProductEntity> products;
 }

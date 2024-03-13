@@ -14,7 +14,6 @@ public class ProductEntity {
     @Column(name = "consumable")
     private boolean consumable;
 
-    @ManyToOne
-    @JoinColumn(name = "brand_siret", referencedColumnName = "siretNumber")
+    @OneToMany(mappedBy = "products")
     private BrandEntity brand;
 }
