@@ -1,4 +1,4 @@
-##### Binome BOUGUESSA NOUR ET BENAMMAR MAHMOUD
+##### Binome BOUGUESSA NOUR et BENAMMAR MAHMOUD
 
 ## Compte rendu TP1:
 
